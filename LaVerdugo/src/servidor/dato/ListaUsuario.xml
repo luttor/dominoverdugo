@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usuarios tipo="lista de usuarios">
+    <usuario>
+        <nick>miner</nick>
+        <clave>123</clave>
+        <nombre>minerva</nombre>
+        <apellido>verdugo</apellido>
+        <fechanac>09/04/1987</fechanac>
+        <avatar>/src/Imagen/avatar1.png</avatar>
+    </usuario>
+    <usuario>
+        <nick>isra</nick>
+        <clave>123</clave>
+        <nombre>isra</nombre>
+        <apellido>123</apellido>
+        <fechanac>02/08/10</fechanac>
+        <avatar>/src/Imagen/avatar3.png</avatar>
+    </usuario>
+    <usuario>
+        <nick>israosuna</nick>
+        <clave>123</clave>
+        <nombre>israel</nombre>
+        <apellido>osuna</apellido>
+        <fechanac>01/08/10</fechanac>
+        <avatar>/src/Imagen/avatar1.png</avatar>
+    </usuario>
+    <usuario>
+        <nick>javiccs</nick>
+        <clave>clave</clave>
+        <nombre>nombre</nombre>
+        <apellido>apellido</apellido>
+        <fechanac>10/10/10</fechanac>
+        <avatar>1</avatar>
+    </usuario>
+    <usuario>
+        <nick>jesus</nick>
+        <clave>123</clave>
+        <nombre>israosuna</nombre>
+        <apellido>osuna</apellido>
+        <fechanac>01/08/10</fechanac>
+        <avatar>/src/Imagen/avatar1.png</avatar>
+    </usuario>
+</usuarios>
