@@ -18,9 +18,9 @@ import org.jdom.output.*;
  */
 public class ArchivoFicha
 {
-    private static String nombreArchivoPiezas = "src/datos/piezas.xml";
+    private static String nombreArchivoPiezas = "src/ListaFichaInicial.xml";
 
-    public static void cargarArchivoPiezas(ListaFicha laLista)
+    public static ListaFicha cargarArchivoPiezas(ListaFicha laLista)
     {
         try
         {
@@ -32,7 +32,7 @@ public class ArchivoFicha
             /* Se obtiene la raíz del archivo (la etiqueta inicial) */
             Element raiz = doc.getRootElement();
 
-            List listaPiezas = raiz.getChildren("pieza");
+            List listaPiezas = raiz.getChildren("ficha");
 
             /* Se genera un iterador para recorrer el List que se generó */
             Iterator i = listaPiezas.iterator();
@@ -43,22 +43,18 @@ public class ArchivoFicha
                 /* Se obtiene cada uno y se asigna a un objeto de tipo Element */
                 Element e = (Element) i.next();
 
-                /* Se obtiene el nombre, apellido y cargo de cada una de las etiquetas  */
-                /* hijas de usuario, es decir, nombre, apellido y cargo                 */
-                Element nombre = e.getChild("nombre");
-                Element apellido = e.getChild("apellido");
-                Element cargo = e.getChild("cargo");
-                Element numero = e.getChild("numero");
+             
 
                 Element ID = e.getChild("ID");
-                Element valSup = e.getChild("valSup");
-                Element valInf = e.getChild("valInf");
+                Element valSup = e.getChild("X");
+                Element valInf = e.getChild("Y");
                 Element imagenA = e.getChild("imagenA");
                 Element imagenB = e.getChild("imagenB");
                 Element imagenI = e.getChild("imagenI");
                 Element imagenD = e.getChild("imagenD");
 
-                Ficha laFicha = new Ficha(Integer.parseInt(ID.getText()),Integer.parseInt(valSup.getText()),Integer.parseInt(valInf.getText()),imagenA.getText(), imagenB.getText(),imagenI.getText(), imagenD.getText());
+               Ficha laFicha = new Ficha(Integer.parseInt(ID.getText()),Integer.parseInt(valSup.getText()),Integer.parseInt(valInf.getText()),imagenA.getText(), imagenB.getText(),imagenI.getText(), imagenD.getText());
+                
                 laLista.AgregarElemento(laFicha);
             }
         }
@@ -66,6 +62,7 @@ public class ArchivoFicha
         {
             e.printStackTrace();
         }
+        return laLista;
     }
 
     public static void guardarArchivoPiezas(ListaFicha laLista)
